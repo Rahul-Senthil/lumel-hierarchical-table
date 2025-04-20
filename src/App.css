@@ -1,0 +1,32 @@
+.App {
+    text-align: center;
+    margin: 50px;
+}
+
+.heirarchical-table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-header {
+    background-color: rgb(166, 167, 168);
+}
+
+.btn {
+    border: none;
+    height: 25px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.percent-btn {
+    background-color: rgb(70, 105, 143);
+    color: white;
+}
+
+.val-btn {
+    background-color: rgb(7, 130, 54);
+    color: white;
+}
