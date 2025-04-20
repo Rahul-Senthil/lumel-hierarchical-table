@@ -4,6 +4,7 @@ import { calculateVariance } from "../helper";
 const Row = ({row, handleUpdateItem, originalValues, isChild}) => {
 
     const [input, setInput] = useState("");
+    const variance = calculateVariance(originalValues[row.id], row.value);
 
     const handleAllocationPercentage = () => {
         const percent = parseFloat(input);
@@ -29,7 +30,7 @@ const Row = ({row, handleUpdateItem, originalValues, isChild}) => {
                 <td><input type="text" value={input} onChange={(e) => setInput(e.target.value)}/></td>
                 <td><button className="btn percent-btn" onClick={handleAllocationPercentage}>Update by %</button></td>
                 <td><button className="btn val-btn" onClick={handleAllocationValue}>Update by Value</button></td>
-                <td>{calculateVariance(originalValues[row.id], row.value)}%</td>
+                <td>{variance}%</td>
             </tr>
             {row.children?.map((childRow, index) => (
                 <Row 
